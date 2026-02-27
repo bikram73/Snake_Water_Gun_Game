@@ -1,4 +1,4 @@
-# 🐍 Snake Water Gun Game 🔫
+# Snake 🐍 Water 💧 Gun 🔫 Game 🎮
 
 A modern, interactive adaptation of the classic **Snake Water Gun** game (similar to Rock Paper Scissors). This project offers two ways to play: a **Web Application** built with Flask and a **Desktop Application** built with Tkinter.
 
@@ -73,7 +73,4 @@ This project is configured for easy deployment on Vercel.
 | *Same* | *Same* | **Draw** 😐 |
 | *Other* | *Other* | **Lose** 🤖 |
 
----
-
-Made with ❤️ and Python.
-```
+## Made with ❤️ and Python.
