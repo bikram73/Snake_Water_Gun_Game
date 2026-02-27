@@ -2,8 +2,7 @@
 
 A modern, interactive adaptation of the classic **Snake Water Gun** game (similar to Rock Paper Scissors). This project offers two ways to play: a **Web Application** built with Flask and a **Desktop Application** built with Tkinter.
 
-![Game Preview](https://via.placeholder.com/800x400?text=Snake+Water+Gun+Game+UI) 
-*(Replace this link with a screenshot of your actual game after running it)*
+![Game Preview](images/game.png) 
 
 ## 🚀 Features
 
@@ -32,7 +31,7 @@ Snake_Water_Gun_Game/
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/your-username/snake-water-gun.git
+    git clone https://github.com/bikram73/Snake_Water_Gun_Game.git
     cd snake-water-gun
     ```
 
@@ -49,19 +48,6 @@ Snake_Water_Gun_Game/
 
 4.  **Play!**
     Open your browser and go to: `http://127.0.0.1:5000`
-
-## 🌐 Deployment
-
-### Deploying to Vercel
-
-This project is configured for easy deployment on Vercel.
-
-1.  Push your code to **GitHub**.
-2.  Log in to Vercel.
-3.  Click **"Add New..."** -> **"Project"**.
-4.  Import your GitHub repository.
-5.  Vercel will detect the `vercel.json` and `requirements.txt`.
-6.  Click **Deploy**.
 
 ## 🧠 Game Logic
 
