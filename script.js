@@ -31,33 +31,26 @@ async function playGame(userChoice) {
         
         const data = await response.json();
 
-        // Suspense before showing result (UI animation)
-        setTimeout(() => {
-            updateChoiceDisplays(data.user_choice, data.comp_choice);
-            
-            if (data.winner === "user") {
-                userScore++;
-                updateResultMessage(data.result, "#2ecc71");
-                updateScore(userScoreEl, userScore);
-            } else if (data.winner === "computer") {
-                compScore++;
-                updateResultMessage(data.result, "#e74c3c");
-                updateScore(compScoreEl, compScore);
-            } else {
-                drawScore++;
-                updateResultMessage(data.result, "#f39c12");
-                updateScore(drawScoreEl, drawScore);
-            }
+        // Update UI immediately
+        updateChoiceDisplays(data.user_choice, data.comp_choice);
+        
+        if (data.winner === "user") {
+            userScore++;
+            updateResultMessage(data.result, "#2ecc71");
+            updateScore(userScoreEl, userScore);
+        } else if (data.winner === "computer") {
+            compScore++;
+            updateResultMessage(data.result, "#e74c3c");
+            updateScore(compScoreEl, compScore);
+        } else {
+            drawScore++;
+            updateResultMessage(data.result, "#f39c12");
+            updateScore(drawScoreEl, drawScore);
+        }
 
-            // Reset UI state
-            setTimeout(() => {
-                toggleButtons(false);
-                selectedBtn.classList.remove("selected");
-                userScoreEl.classList.remove("updated");
-                compScoreEl.classList.remove("updated");
-                drawScoreEl.classList.remove("updated");
-            }, 800);
-        }, 400);
+        // Reset UI state immediately
+        toggleButtons(false);
+        selectedBtn.classList.remove("selected");
 
     } catch (error) {
         console.error("Error connecting to backend:", error);
@@ -96,6 +89,8 @@ function updateResultMessage(message, color) {
 
 function updateScore(element, score) {
     element.innerText = score;
+    element.classList.remove("updated");
+    void element.offsetWidth; // Trigger reflow to restart animation
     element.classList.add("updated");
 }
 
