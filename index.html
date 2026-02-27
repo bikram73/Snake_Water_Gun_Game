@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Snake 🐍 Water 💧 Gun 🔫</h1>
+            <p>Beat the computer!</p>
+        </header>
+
+        <div class="scoreboard">
+            <div class="score-box">
+                <span id="user-score">0</span>
+                <p>You</p>
+            </div>
+            <div class="score-box">
+                <span id="draw-score">0</span>
+                <p>Draw</p>
+            </div>
+            <div class="score-box">
+                <span id="comp-score">0</span>
+                <p>Computer</p>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="result-display" id="result-msg">Choose your weapon!</div>
+            <div class="choices-display">
+                <p id="user-choice-display">You: ❓</p>
+                <p id="comp-choice-display">Comp: ❓</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="snake">🐍 Snake</button>
+            <button class="btn" id="water">💧 Water</button>
+            <button class="btn" id="gun">🔫 Gun</button>
+        </div>
+        <button class="restart-btn" id="restart">Restart Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

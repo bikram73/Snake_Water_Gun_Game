@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+}
+
+.score-box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.score-box span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+.score-box span.updated {
+    display: inline-block;
+    animation: score-update 0.5s ease-in-out;
+}
+
+.game-area {
+    margin: 20px 0;
+    min-height: 100px;
+}
+
+.result-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    min-height: 1.5em;
+}
+
+.result-display.animate {
+    display: inline-block;
+    animation: result-animation 0.4s ease-out;
+}
+
+.choices-display {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ecf0f1;
+    color: #2c3e50;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #bdc3c7;
+}
+
+.btn.selected {
+    transform: translateY(-1px);
+    background: #f1c40f;
+    box-shadow: 0 0 10px #f1c40f;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.restart-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.restart-btn:hover {
+    background: #c0392b;
+}
+
+@keyframes result-animation {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes score-update {
+    50% { transform: scale(1.2); }
+}
